@@ -1,0 +1,26 @@
+{
+  "name": "myertest",
+  "version": "1.0.0",
+  "description": "test myer account creation feature",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:tests": "cypress run"
+  },
+  "keywords": [
+    "cypress",
+    "BDD",
+    "cucumber"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^12.13.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "prettier": "^2.8.8"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions" : true,
+    "step_definitions" : "cypress/e2e/signUp"
+  }
+}
