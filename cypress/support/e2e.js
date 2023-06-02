@@ -1,20 +1,15 @@
-// ***********************************************************
-// This example support/e2e.js is processed and
-// loaded automatically before your test files.
-//
-// This is a great place to put global configuration and
-// behavior that modifies Cypress.
-//
-// You can change the location of this file or turn off
-// automatically serving support files with the
-// 'supportFile' configuration option.
-//
-// You can read more here:
-// https://on.cypress.io/configuration
-// ***********************************************************
+// cypress/support/e2e.js
 
-// Import commands.js using ES2015 syntax:
-import './commands'
+// Import any necessary dependencies or custom commands here
+// For example:
+// import 'cypress-commands';
 
-// Alternatively you can use CommonJS syntax:
-// require('./commands')
+// You can also define custom Cypress commands here
+// For example:
+// Cypress.Commands.add('login', (username, password) => {
+//   // Custom login logic
+// });
+
+// You can export any utility functions or variables if needed
+// For example:
+// export const apiUrl = 'https://api.example.com';
