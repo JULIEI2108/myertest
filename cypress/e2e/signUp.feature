@@ -95,3 +95,18 @@ Feature: Myer Account sign up
     And I fill in the date of birth input field with a valid date of birth
     And I click the Create Account button without entering the address
     Then I should see an error message indicating that the address is required
+
+  Scenario: Registration with a registered email
+    Given I am on the Myer registration page
+    When I fill in the email input field with a registered email address
+    And I click Join button
+    And I should see input field for password
+    And I fill in the password input field with a valid password
+    And I fill in the first name input field with a valid first name
+    And I fill in the last name input field with a valid last name
+    And I fill in the mobile phone input field with a valid mobile phone number
+    And I fill in the date of birth input field with a valid date of birth
+    And I fill in the address input field with a valid address
+    And I select the address from the suggested options
+    And I click the Create Account button
+    Then I should see an error message indicating that the email address is already registered
