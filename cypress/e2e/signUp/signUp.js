@@ -1,6 +1,6 @@
 import { Given, When, And, Then, Before } from "cypress-cucumber-preprocessor/steps" ;
 const userData = {
-    email: 'jinjinlei2108+test107@gmail.com',
+    email: 'jinjinlei2108+test200@gmail.com',
     invalidemail: 'jinjinlei2108+test101gmail.com',
     password: 'Myertestsample1',
     invalidpassword: 'Myertestsample',
@@ -145,4 +145,25 @@ When("I fill in the password input field with a valid password", () => {
   Then("I should see an error message indicating that the email address is already registered", () => {
     cy.get('span').contains('You already have an account.').should('be.visible');
   });
+
+  And("I visit the registration page without entering an email address", () => {
+  });
+
+  And("I leave the password input field blank", () => {
+  });
+
+  And("I leave the first name input field blank", () => {
+  });
+  
+  And("I leave the last name input field blank", () => {
+  });
+
+  And("I leave the mobile phone input field blank", () => {
+  });
+  
+  And("I leave the date of birth input field blank", () => {
+  });
+
+
+
   

@@ -110,3 +110,85 @@ Feature: Myer Account sign up
     And I select the address from the suggested options
     And I click the Create Account button
     Then I should see an error message indicating that the email address is already registered
+
+
+  Scenario: Load registration form without entering an email address
+    Given I am on the Myer registration page
+    When I visit the registration page without entering an email address
+    And I click Join button
+    Then I should see an error message indicating invalid email address
+
+  Scenario: Registration without entering a password
+    Given I am on the Myer registration page
+    When I fill in the email input field with a valid email address
+    And I click Join button
+    And I should see input field for password
+    And I leave the password input field blank
+    And I fill in the first name input field with a valid first name
+    And I fill in the last name input field with a valid last name
+    And I fill in the mobile phone input field with a valid mobile phone number
+    And I fill in the date of birth input field with a valid date of birth
+    And I fill in the address input field with a valid address
+    And I select the address from the suggested options
+    And I click the Create Account button
+    Then I should see an error message indicating valid password is required
+
+  Scenario: Registration without entering a first name
+    Given I am on the Myer registration page
+    When I fill in the email input field with a valid email address
+    And I click Join button
+    And I should see input field for password
+    And I fill in the password input field with a valid password
+    And I leave the first name input field blank
+    And I fill in the last name input field with a valid last name
+    And I fill in the mobile phone input field with a valid mobile phone number
+    And I fill in the date of birth input field with a valid date of birth
+    And I fill in the address input field with a valid address
+    And I select the address from the suggested options
+    And I click the Create Account button
+    Then I should see an error message indicating invalid first name
+
+  Scenario: Registration without entering a last name
+    Given I am on the Myer registration page
+    When I fill in the email input field with a valid email address
+    And I click Join button
+    And I should see input field for password
+    And I fill in the password input field with a valid password
+    And I fill in the first name input field with a valid first name
+    And I leave the last name input field blank
+    And I fill in the mobile phone input field with a valid mobile phone number
+    And I fill in the date of birth input field with a valid date of birth
+    And I fill in the address input field with a valid address
+    And I select the address from the suggested options
+    And I click the Create Account button
+    Then I should see an error message indicating invalid last name
+
+  Scenario: Registration without entering a mobile phone number
+    Given I am on the Myer registration page
+    When I fill in the email input field with a valid email address
+    And I click Join button
+    And I should see input field for password
+    And I fill in the password input field with a valid password
+    And I fill in the first name input field with a valid first name
+    And I fill in the last name input field with a valid last name
+    And I leave the mobile phone input field blank
+    And I fill in the date of birth input field with a valid date of birth
+    And I fill in the address input field with a valid address
+    And I select the address from the suggested options
+    And I click the Create Account button
+    Then I should see an error message indicating invalid mobile phone number
+
+  Scenario: Registration without entering a date of birth
+    Given I am on the Myer registration page
+    When I fill in the email input field with a valid email address
+    And I click Join button
+    And I should see input field for password
+    And I fill in the password input field with a valid password
+    And I fill in the first name input field with a valid first name
+    And I fill in the last name input field with a valid last name
+    And I fill in the mobile phone input field with a valid mobile phone number
+    And I leave the date of birth input field blank
+    And I fill in the address input field with a valid address
+    And I select the address from the suggested options
+    And I click the Create Account button
+    Then I should see an error message : Please enter a valid birthday
