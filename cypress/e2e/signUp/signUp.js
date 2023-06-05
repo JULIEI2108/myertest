@@ -1,6 +1,6 @@
 import { Given, When, And, Then, Before } from "cypress-cucumber-preprocessor/steps" ;
 const userData = {
-    email: 'jinjinlei2108+test106@gmail.com',
+    email: 'jinjinlei2108+test107@gmail.com',
     invalidemail: 'jinjinlei2108+test101gmail.com',
     password: 'Myertestsample1',
     invalidpassword: 'Myertestsample',
